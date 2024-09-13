@@ -1,0 +1,718 @@
+/* ######################### IMPORTS ############################## */
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* ######################### COMMON ############################## */
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.big-button-home{
+    width: 100%;
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-button{
+    background-color: #4A1071;
+    color: #EEE3F5;
+    width: 60%;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 5px;
+    font-family: "Lobster Two", sans-serif;
+    font-size: 1.2rem;
+}
+
+.anchors{
+    text-decoration: none;
+    color: inherit
+}
+
+button{
+    cursor: pointer;
+}
+
+dialog{
+    border: none;
+    border-radius: 15px;
+    padding: 2rem;
+    font-family: "Poppins", sans-serif;
+}
+
+dialog button{
+    width: 100%;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    padding: 0.5rem 1rem;
+    background-color: #4A1071;
+    color: #D4C8DC;
+    border-radius: 7px;
+}
+
+/* ######################### NAVBAR ############################## */
+
+header {
+    background: #FFF8F8;
+    color: #4A1071;
+    padding: 1rem 2rem;
+    margin: 0 1rem;
+    border-radius:50px;
+    width: 80%;
+    position: fixed;
+    top: 7px;
+    z-index: 1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    font-size: 1rem;
+    font-family: "Lobster Two", sans-serif;
+    color: #4A1071;
+    font-weight: 700;
+}
+
+.bold{
+    font-weight: 500;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle .hamburger,
+.menu-toggle .hamburger::before,
+.menu-toggle .hamburger::after {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #4A1071;
+    border-radius: 3px;
+    position: relative;
+}
+
+.menu-toggle .hamburger::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+}
+
+.menu-toggle .hamburger::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+}
+
+.drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: #DFD6DE;
+    color: #4A1071;
+    transition: right 0.3s ease;
+    overflow: auto;
+    z-index: 100;
+}
+
+.drawer.open {
+    right: 0;
+}
+
+.drawer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 60px;
+}
+
+.drawer-menu li {
+    margin: 20px 0;
+}
+
+.drawer-menu a {
+    color: #4A1071;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: block;
+    padding: 10px 20px;
+}
+
+.drawer .close-btn {
+    background: transparent;
+    border: none;
+    color: #4A1071;
+    font-size: 2em;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu li a {
+    color: #4A1071;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+
+
+/* ######################### HERO SECTION ############################## */
+.outer-container-hero{
+    background-color: #D4C8DC;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero-section .inner-container{
+    margin-top: 30px;
+}
+
+.inner-container{
+    margin-top: 20px;
+}
+
+.hero-text{
+    width: 600px;
+}
+
+#hero-section h1{
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: #4A1071;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+#hero-section p{
+    font-size: 0.9rem;
+    color: #200731;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.hero-video{
+    border: 5px solid #734F8B; /*#F1E9F6 */
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+#hero-section .big-button-home{
+    margin: 1rem;
+}
+
+/* ######################### ABOUT US ############################## */
+
+.about-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:2rem;
+}
+
+.about-container p{
+    color: #200731;
+}
+
+.about-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-text h3{
+    font-size: 1.8rem;
+    color: #4A1071;
+    text-decoration: underline;
+}
+
+.about-text p{
+    font-size: 1.2rem;
+}
+
+.about-image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img{
+    width: 80%;
+    height: auto;
+}
+
+.about-container .big-button{
+    width: 80%;
+}
+
+
+/* ######################### TESTIMONIALS ############################## */
+
+.testimonial-organizer{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.testimonial{
+    background-color: #734F8B;
+    padding: 1rem;
+    color: #F1E9F6;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    justify-content: center;
+}
+
+.testimonial .img-text img{
+    border: 2px solid #F1E9F6;
+    border-radius: 50%;
+}
+
+.img-text{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.person{
+    margin-left: 0.5rem;
+}
+
+.person .name, .person .country{
+    margin: 0;
+}
+
+.person .name{
+    font-weight: 300;
+}
+
+.person .country{
+    font-size: 0.7rem;
+}
+
+.stars{
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+audio{
+    width: 150px;
+    height: 30px;
+    position: relative;
+    z-index: 0;
+}
+
+
+
+
+/* ######################### SUBSCRIPTION ############################## */
+
+.outer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-container{
+    width: 80%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #F1E9F6;
+    color: #200731;
+    margin: 20px 0;
+}
+
+th {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 2px solid #200731;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+td:first-child,
+th:first-child {
+    width: 40%;
+    text-align: left;
+    padding-left: 15px;
+}
+
+td:not(:first-child),
+th:not(:first-child) {
+    width: 20%;
+}
+
+.subscription-form-container{
+    padding: 1rem 0;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscription-form-container form{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.subscription-form-container form div{
+    text-align: center;
+}
+
+/* ######################### CUSTOM STICKER ############################## */
+
+.outer-container-dark{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D4C8DC;
+}
+
+.inner-container{
+    width: 80%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.heading-light{
+    width: 80%;
+    border: 1px solid #4A1071;
+    padding: 0.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    background-color: #EEE5ED;
+    border-radius: 50px;
+    font-family: "Lobster Two", sans-serif;
+    color: #4A1071;
+}
+
+.heading-light h2{
+    margin: 0;
+}
+
+.custom-order-form-container{
+    width: 80%;
+}
+
+.form-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    padding: 1rem;
+}
+
+.custom-order-form-container label{
+    font-size: 0.8rem;
+}
+
+.custom-order-form-container input, .custom-order-form-container textarea{
+    width: 70%;
+    background-color: #FEFCFF;
+    border: 1px solid #4A1071;
+    font-family: "Poppins", sans-serif;
+    padding: 0.5rem 1rem;
+}
+
+
+
+
+/* ######################### FOOTER ############################## */
+
+footer{
+    background-color:#36194A;
+    color: #EEE5ED;
+    
+}
+
+#footer-container{
+    margin: 0;
+    padding-top: 2rem;
+}
+
+.footer-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lobster Two", sans-serif;
+}
+
+.footer-logo h2{
+    margin: 0;
+}
+
+.footer-logo img{
+    margin-right: 1rem;
+}
+
+.news-location-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newsletter{
+    margin: 0;
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+
+
+.newsletter h2{
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.newsletter form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+.newsletter input[id="news-email"]{
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+}
+
+
+.newsletter input[value="JOIN NOW"]{
+    width: 100%;
+    padding: 0.4rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #EEE5ED;
+    background-color: #170225;
+    border: 1px solid #EEE5ED;
+}
+
+.location-details{
+    width: 300px;
+    height: 100px;
+}
+
+.location-details{
+    font-size: 15px;
+    width: 300px;
+}
+
+.location-details p{
+    margin-top: 0.1rem;
+}
+
+.email-tel{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 0.7rem;
+}
+
+.email-tel a{
+    color: #EEE5ED;
+}
+
+menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 0;
+
+}
+menu li{
+    list-style: none;
+}
+
+
+
+summary img{
+    width: 10px;
+}
+
+.copyright{
+    background-color: #170225;
+    padding: 0.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.5rem;
+
+}
+
+.copyright a{
+    color: #EEE5ED;
+}
+
+/* ############# MOBILE #############*/
+@media screen and (max-width:630px){
+    .nav-menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle.hidden {
+        display: none;
+    }
+    .hero-video video{
+        width: 320px;
+        height: 240px;
+    }
+
+    .hero-text{
+        width: 100%;
+    }
+
+    .big-button-home{
+        margin:1.5rem;
+    }
+    .about-text{
+        text-align: center;
+    }
+    .about-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:0;
+    }
+
+    .about-image{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+    }
+    .about-image img{
+        width: 100%;
+    }
+    .testimonial-organizer{
+        grid-template-columns: 1fr 1fr;
+    }
+    .subscription-table-container{
+        font-size: 0.7rem;
+    }
+    .subscription-form-container form{
+        grid-template-columns: 1fr;
+    }
+    .newsletter{
+        margin-bottom: 4rem;
+    }
+    .news-location-container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .custom-order-form-container{
+        width: 100%;
+    }
+    #custom-order-inner-container, #subscription-inner-container{
+        width: 100%;
+        margin: 0;
+        padding: 0.5rem;
+    }
+}
+
+/* ############# DESKTOP ############*/
+@media screen and (min-width:630px){
+
+    .subscription-table-container{
+        width: 80%;
+    }
+
+    .newsletter{
+        width: 70%;
+    }
+
+    .location{
+        padding: 1.5rem;
+        padding-left:3rem;
+    }
+    
+}
+
+/* ############# TABLET ############*/
+
+@media screen and (min-width:630px) and (max-width:830px){
+    .about-text h3{
+        font-size: 1.4rem;
+        color: #4A1071;
+        text-decoration: underline;
+    }
+    
+    .about-text p{
+        font-size: 0.8rem;
+    }
+    .testimonial-organizer{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .newsletter form{
+        width: 100%;
+    }
+
+    .location-details{
+        font-size: 15px;
+        width: 150px;
+    }
+}
